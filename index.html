@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Larvex — Prevención del Dengue
+    </title>
+
+    <!-- ICONO DE LA PESTAÑA -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="img/favicon.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVEGACIÓN
+===================================================== -->
+
+<nav>
+
+    <div class="logo">
+        Larv<span>ex</span>
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html" class="active">
+                Inicio
+            </a>
+        </li>
+
+        <li>
+            <a href="reportar.html">
+                Reportar
+            </a>
+        </li>
+
+        <li>
+            <a href="juego.html">
+                Juego
+            </a>
+        </li>
+
+        <li>
+            <a href="equipo.html">
+                Equipo
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="mosquito-icon">
+        🦟
+    </div>
+
+    <div class="hero-badge">
+        Equipo G.E.N · Fe y Alegría N.° 36
+    </div>
+
+    <h1>
+        Juntos eliminamos
+        <br>
+        <em>los criaderos</em>
+    </h1>
+
+    <p>
+        Plataforma comunitaria para prevenir el dengue durante
+        el Fenómeno El Niño. Aprende a identificar criaderos,
+        reporta zonas vulnerables y ayuda a proteger tu comunidad.
+    </p>
+
+    <div class="hero-btns">
+
+        <a
+            href="reportar.html"
+            class="btn btn-primary"
+        >
+            📍 Reportar zona de riesgo
+        </a>
+
+        <a
+            href="juego.html"
+            class="btn btn-secondary"
+        >
+            🎮 Jugar Larvex
+        </a>
+
+    </div>
+
+
+    <a
+        href="#informacion"
+        class="scroll-indicator"
+        aria-label="Ver más información"
+    >
+        <span>Descubre más</span>
+        <div>↓</div>
+    </a>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCCIÓN
+===================================================== -->
+
+<section
+    class="inicio-intro"
+    id="informacion"
+>
+
+    <div class="inicio-intro-container reveal">
+
+        <p class="section-label">
+            ¿Qué está pasando?
+        </p>
+
+        <h2>
+            El Fenómeno El Niño y el dengue
+            en nuestra comunidad
+        </h2>
+
+        <p>
+            Las lluvias intensas pueden generar acumulación de
+            agua en calles, patios y viviendas. Estos espacios
+            pueden convertirse en criaderos del mosquito
+            <em>Aedes aegypti</em>, transmisor del dengue.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FILA 1
+===================================================== -->
+
+<section class="info-row-section">
+
+    <div class="info-row reveal">
+
+        <div class="info-row-image">
+
+            <img
+                src="img/fenomeno-nino.jpg"
+                alt="Lluvias ocasionadas por el Fenómeno El Niño"
+            >
+
+            <div class="image-badge">
+                🌧️ Clima
+            </div>
+
+        </div>
+
+
+        <div class="info-row-content">
+
+            <span class="info-number">
+                01
+            </span>
+
+            <p class="section-label">
+                Fenómeno El Niño
+            </p>
+
+            <h2>
+                ¿Por qué aumentan los riesgos?
+            </h2>
+
+            <p>
+                Durante periodos de lluvias intensas pueden aparecer
+                charcos, recipientes llenos de agua y zonas inundadas.
+                Si permanecen así durante varios días, pueden
+                convertirse en lugares favorables para la reproducción
+                del mosquito.
+            </p>
+
+            <button
+                class="info-more-btn"
+                onclick="toggleInfo(this)"
+            >
+                Ver recomendaciones
+                <span>+</span>
+            </button>
+
+            <div class="info-extra">
+
+                <ul>
+                    <li>
+                        Revisa patios y techos después de una lluvia.
+                    </li>
+
+                    <li>
+                        Vacía recipientes que hayan acumulado agua.
+                    </li>
+
+                    <li>
+                        Mantén limpios desagües y canaletas.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FILA 2
+===================================================== -->
+
+<section class="info-row-section alternate-bg">
+
+    <div class="info-row info-row-reverse reveal">
+
+        <div class="info-row-image">
+
+            <img
+                src="img/mosquito-aedes.jpg"
+                alt="Mosquito Aedes aegypti"
+            >
+
+            <div class="image-badge">
+                🦟 Dengue
+            </div>
+
+        </div>
+
+
+        <div class="info-row-content">
+
+            <span class="info-number">
+                02
+            </span>
+
+            <p class="section-label">
+                Aedes aegypti
+            </p>
+
+            <h2>
+                ¿Dónde aparecen los criaderos?
+            </h2>
+
+            <p>
+                El mosquito puede aprovechar recipientes pequeños
+                que acumulen agua. No se necesita una gran cantidad
+                para que exista un posible criadero.
+            </p>
+
+
+            <div class="mini-grid">
+
+                <div class="mini-card">
+                    <span>🪣</span>
+                    <strong>Baldes</strong>
+                </div>
+
+                <div class="mini-card">
+                    <span>🛞</span>
+                    <strong>Llantas</strong>
+                </div>
+
+                <div class="mini-card">
+                    <span>🪴</span>
+                    <strong>Macetas</strong>
+                </div>
+
+                <div class="mini-card">
+                    <span>🧴</span>
+                    <strong>Recipientes</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FILA 3
+===================================================== -->
+
+<section class="info-row-section">
+
+    <div class="info-row reveal">
+
+        <div class="info-row-image">
+
+            <img
+                src="img/sintomas-dengue.jpg"
+                alt="Persona con síntomas de dengue"
+            >
+
+            <div class="image-badge">
+                🤒 Síntomas
+            </div>
+
+        </div>
+
+
+        <div class="info-row-content">
+
+            <span class="info-number">
+                03
+            </span>
+
+            <p class="section-label">
+                Cuida tu salud
+            </p>
+
+            <h2>
+                Reconoce los síntomas
+            </h2>
+
+
+            <div class="symptoms-grid">
+
+                <div class="symptom">
+                    🌡️
+                    <span>
+                        Fiebre
+                    </span>
+                </div>
+
+                <div class="symptom">
+                    🤕
+                    <span>
+                        Dolor de cabeza
+                    </span>
+                </div>
+
+                <div class="symptom">
+                    👁️
+                    <span>
+                        Dolor detrás de los ojos
+                    </span>
+                </div>
+
+                <div class="symptom">
+                    💪
+                    <span>
+                        Dolor muscular
+                    </span>
+                </div>
+
+                <div class="symptom">
+                    🤢
+                    <span>
+                        Náuseas
+                    </span>
+                </div>
+
+                <div class="symptom">
+                    🔴
+                    <span>
+                        Sarpullido
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="health-alert">
+
+                <span>
+                    ⚕️
+                </span>
+
+                <p>
+                    Si presentas síntomas, busca orientación
+                    en un establecimiento de salud.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FILA 4
+===================================================== -->
+
+<section class="info-row-section alternate-bg">
+
+    <div class="info-row info-row-reverse reveal">
+
+        <div class="info-row-image">
+
+            <img
+                src="img/prevencion-dengue.jpg"
+                alt="Prevención contra el dengue"
+            >
+
+            <div class="image-badge">
+                🛡️ Prevención
+            </div>
+
+        </div>
+
+
+        <div class="info-row-content">
+
+            <span class="info-number">
+                04
+            </span>
+
+            <p class="section-label">
+                Prevenir está en nuestras manos
+            </p>
+
+            <h2>
+                Pequeñas acciones hacen
+                una gran diferencia
+            </h2>
+
+
+            <div class="check-list">
+
+                <div>
+                    <span>✓</span>
+                    Elimina agua acumulada.
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Tapa correctamente los depósitos.
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Limpia canaletas y desagües.
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Usa repelente.
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Revisa patios y jardines.
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Reporta zonas vulnerables.
+                </div>
+
+            </div>
+
+
+            <a
+                href="reportar.html"
+                class="btn-info-action"
+            >
+                📍 Reportar una zona
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ACCIONES LARVEX
+===================================================== -->
+
+<section class="actions-section">
+
+    <div class="container">
+
+        <div class="actions-header reveal">
+
+            <p class="section-label">
+                Participa
+            </p>
+
+            <h2>
+                Tú también puedes ayudar
+            </h2>
+
+            <p>
+                Aprende, identifica los riesgos y participa
+                junto a tu comunidad.
+            </p>
+
+        </div>
+
+
+        <div class="actions-grid">
+
+            <a
+                href="reportar.html"
+                class="action-card reveal"
+            >
+
+                <div class="action-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Reportar
+                </h3>
+
+                <p>
+                    Informa sobre zonas con agua acumulada
+                    o posibles criaderos.
+                </p>
+
+                <span>
+                    Ir a reportes →
+                </span>
+
+            </a>
+
+
+            <a
+                href="juego.html"
+                class="action-card reveal"
+            >
+
+                <div class="action-icon">
+                    🎮
+                </div>
+
+                <h3>
+                    Jugar
+                </h3>
+
+                <p>
+                    Pon a prueba tus conocimientos sobre
+                    prevención del dengue.
+                </p>
+
+                <span>
+                    Comenzar juego →
+                </span>
+
+            </a>
+
+
+            <a
+                href="equipo.html"
+                class="action-card reveal"
+            >
+
+                <div class="action-icon">
+                    👥
+                </div>
+
+                <h3>
+                    Conócenos
+                </h3>
+
+                <p>
+                    Descubre quiénes forman parte del
+                    equipo G.E.N.
+                </p>
+
+                <span>
+                    Ver equipo →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FRASE FINAL
+===================================================== -->
+
+<section class="final-banner">
+
+    <div class="reveal">
+
+        <span>
+            🦟
+        </span>
+
+        <h2>
+            Sin criaderos,
+            <strong>no hay mosquitos.</strong>
+        </h2>
+
+        <p>
+            La prevención comienza en casa y continúa
+            en nuestra comunidad.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        Larvex · Equipo <strong>G.E.N</strong> ·
+        I.E. Fe y Alegría N.° 36, Trujillo ·
+        Crea y Emprende 2026
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

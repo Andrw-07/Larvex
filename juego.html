@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Larvex — Juego
+    </title>
+
+    <!-- ICONO DE LA PESTAÑA -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="img/favicon.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Larv<span>ex</span></div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reportar.html">Reportar</a></li>
+        <li><a href="juego.html" class="active">Juego</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+    </ul>
+</nav>
+
+
+<section id="juego">
+
+    <div class="container">
+
+        <p class="section-label">
+            Aprende jugando
+        </p>
+
+        <h2>
+            Cazador de Criaderos
+        </h2>
+
+        <p class="lead">
+            ¿Sabes identificar los riesgos que favorecen la aparición del mosquito
+            transmisor del dengue? Pon a prueba tus conocimientos.
+        </p>
+
+
+        <div class="game-container">
+
+            <!-- ENCABEZADO -->
+
+            <div class="game-header">
+
+                <div class="game-title">
+                    🦟 Larvex Challenge
+                </div>
+
+                <div class="game-stats">
+
+                    <div class="stat">
+                        Pregunta
+                        <span id="num-pregunta">0</span>/8
+                    </div>
+
+                    <div class="stat">
+                        ⭐
+                        <span id="puntos">0</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BARRA DE PROGRESO -->
+
+            <div class="progress-container">
+                <div
+                    class="progress-bar"
+                    id="progress-bar"
+                ></div>
+            </div>
+
+
+            <div class="game-screen">
+
+                <!-- INTRO -->
+
+                <div
+                    class="game-intro"
+                    id="game-intro"
+                >
+
+                    <div class="game-emoji">
+                        🎮
+                    </div>
+
+                    <h3>
+                        ¿Listo para el desafío?
+                    </h3>
+
+                    <p>
+                        Responde 8 preguntas sobre el dengue,
+                        sus criaderos y cómo prevenirlos.
+                    </p>
+
+                    <p class="game-rule">
+                        Cada respuesta correcta vale
+                        <strong>100 puntos.</strong>
+                    </p>
+
+                    <button
+                        class="btn-game"
+                        onclick="iniciarJuego()"
+                    >
+                        Comenzar desafío
+                    </button>
+
+                </div>
+
+
+                <!-- JUEGO -->
+
+                <div
+                    class="game-play"
+                    id="game-play"
+                >
+
+                    <div class="question-number" id="question-label">
+                        Pregunta 1
+                    </div>
+
+                    <div
+                        class="game-pregunta"
+                        id="pregunta-texto"
+                    ></div>
+
+
+                    <div
+                        class="game-opciones"
+                        id="opciones-container"
+                    ></div>
+
+
+                    <div
+                        class="feedback"
+                        id="feedback"
+                    ></div>
+
+
+                    <button
+                        class="btn-next"
+                        id="btn-next"
+                        onclick="siguientePregunta()"
+                    >
+                        Siguiente →
+                    </button>
+
+                </div>
+
+
+                <!-- FIN -->
+
+                <div
+                    class="game-fin"
+                    id="game-fin"
+                >
+
+                    <div
+                        class="game-emoji"
+                        id="emoji-fin"
+                    >
+                        🏆
+                    </div>
+
+                    <h3 id="titulo-fin">
+                        ¡Felicitaciones!
+                    </h3>
+
+
+                    <p class="resultado-label">
+                        Tu puntaje final
+                    </p>
+
+                    <div
+                        class="puntaje-final"
+                        id="puntaje-fin"
+                    >
+                        0
+                    </div>
+
+                    <p>
+                        puntos de 800
+                    </p>
+
+
+                    <div
+                        class="resultado-correctas"
+                        id="resultado-correctas"
+                    ></div>
+
+
+                    <p
+                        class="comentario-fin"
+                        id="comentario-fin"
+                    ></p>
+
+
+                    <button
+                        class="btn-game"
+                        onclick="reiniciarJuego()"
+                    >
+                        🔄 Jugar de nuevo
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>
+        Larvex · Equipo <strong>G.E.N</strong> ·
+        I.E. Fe y Alegría N.° 36, Trujillo
+    </p>
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

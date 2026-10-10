@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Larvex — Reportar
+    </title>
+
+    <!-- ICONO DE LA PESTAÑA -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="img/favicon.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+</head>
+
+<body class="pagina-reportar">
+
+<nav>
+
+    <div class="logo">
+        Larv<span>ex</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reportar.html" class="active">Reportar</a></li>
+        <li><a href="juego.html">Juego</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+    </ul>
+
+</nav>
+
+
+<main id="mapa">
+
+    <div class="container">
+
+        <!-- CABECERA -->
+
+        <div class="reporte-header">
+
+            <p class="section-label">
+                Zona de reportes
+            </p>
+
+            <h2>
+                Reporta una zona vulnerable
+            </h2>
+
+            <p class="lead">
+                ¿Ves agua estancada en tu calle o vecindario?
+                Repórtalo aquí. Tu reporte ayuda a la comunidad
+                y a identificar zonas que podrían representar un riesgo.
+            </p>
+
+        </div>
+
+
+        <!-- CONTENIDO -->
+
+        <div class="mapa-wrapper">
+
+
+            <!-- =========================
+                 FORMULARIO
+            ========================== -->
+
+            <div class="form-panel">
+
+                <h3 class="panel-title">
+                    📍 Nuevo reporte
+                </h3>
+
+
+                <div class="form-group">
+
+                    <label for="dir">
+                        Dirección o referencia
+                    </label>
+
+                    <input
+                        type="text"
+                        id="dir"
+                        placeholder="Ej: Calle Los Pinos, frente a la bodega"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="tipo">
+                        Tipo de zona
+                    </label>
+
+                    <select id="tipo">
+
+                        <option value="">
+                            Selecciona...
+                        </option>
+
+                        <option value="inundada">
+                            Calle o pista inundada
+                        </option>
+
+                        <option value="recipientes">
+                            Patio o vivienda con recipientes
+                        </option>
+
+                        <option value="parque">
+                            Parque o área verde
+                        </option>
+
+                        <option value="desague">
+                            Canaleta o desagüe tapado
+                        </option>
+
+                        <option value="otro">
+                            Otro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="desc">
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="desc"
+                        placeholder="Cuéntanos qué observaste..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    class="btn-submit"
+                    onclick="enviarReporte()"
+                >
+                    Enviar reporte 🚨
+                </button>
+
+
+                <div
+                    class="success-msg"
+                    id="success-msg"
+                >
+                    ✅ ¡Reporte enviado correctamente!
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 MAPA / REPORTES
+            ========================== -->
+
+            <div class="map-panel">
+
+
+                <!-- MAPA ILUSTRATIVO -->
+
+                <div class="map-visual">
+
+                    <div class="map-block map-block-1"></div>
+                    <div class="map-block map-block-2"></div>
+                    <div class="map-block map-block-3"></div>
+
+                    <div class="map-block map-block-4"></div>
+                    <div class="map-block map-block-5"></div>
+                    <div class="map-block map-block-6"></div>
+
+                    <div class="map-road horizontal-road"></div>
+                    <div class="map-road vertical-road"></div>
+
+
+                    <!-- MARCADORES -->
+
+                    <div class="map-marker marker-1">
+                        !
+                    </div>
+
+                    <div class="map-marker marker-2">
+                        !
+                    </div>
+
+                    <div class="map-marker marker-3">
+                        !
+                    </div>
+
+
+                    <div class="map-label">
+                        🗺️ Zonas reportadas en tu comunidad
+                    </div>
+
+
+                    <span class="map-caption">
+                        Mapa ilustrativo — Trujillo, La Libertad
+                    </span>
+
+                </div>
+
+
+                <!-- ÚLTIMOS REPORTES -->
+
+                <div class="reportes-list">
+
+                    <h4>
+                        Últimos reportes
+                    </h4>
+
+
+                    <div id="lista-reportes">
+
+
+                        <div class="reporte-item">
+
+                            <div class="reporte-dot"></div>
+
+                            <div class="reporte-text">
+
+                                <strong>
+                                    Calle Húmeda, cerca del parque
+                                </strong>
+
+                                <span>
+                                    Acumulación de agua en balde abandonado
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="reporte-item">
+
+                            <div class="reporte-dot"></div>
+
+                            <div class="reporte-text">
+
+                                <strong>
+                                    Jr. Las Lomas 340
+                                </strong>
+
+                                <span>
+                                    Canaleta tapada, agua estancada desde hace 3 días
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="reporte-item">
+
+                            <div class="reporte-dot"></div>
+
+                            <div class="reporte-text">
+
+                                <strong>
+                                    Sector Jerusalén
+                                </strong>
+
+                                <span>
+                                    Llantas viejas con agua en terreno baldío
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Larvex · Equipo <strong>G.E.N</strong> ·
+        I.E. Fe y Alegría N.° 36, Trujillo
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
